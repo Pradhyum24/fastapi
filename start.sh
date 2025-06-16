@@ -1,3 +1,7 @@
 #!/bin/bash
+
+echo "Running Alembic migrations..."
 alembic upgrade head
-uvicorn main:app --host 0.0.0.0 --port 10000
+
+echo "Starting app..."
+uvicorn app.main:app --host=0.0.0.0 --port=10000
